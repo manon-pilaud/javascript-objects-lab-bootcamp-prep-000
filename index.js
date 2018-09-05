@@ -9,11 +9,12 @@ function destructivelyUpdateObjectWithKeyAndValue(recipes, key, value) {
  return recipes
 }
 
-function deleteFromObjectByKey(recipes, key) {
-  var new_recipe = ({}, obj)
-  delete new_recipe.key;
-  return new_recipes
+	function deleteFromObjectByKey(recipes, key) {
+  var newRec = Object.assign({}, recipes);
+  delete newRec.key;
+  return newRec;
 }
+
 function destructivelyDeleteFromObjectByKey(recipes, key) {
   delete recipes[key];
   return recipes
